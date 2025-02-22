@@ -390,7 +390,7 @@
         <h2>Legal Representer</h2>
         <div class="staff-card">
             <h2>Legal Representer</h2>
-            <img src="./image/rugambage.PNG" alt="Director General" class="staff-image">
+            <img src="./images of garden/mm.jpg" alt="Director General" class="staff-image">
             <div class="staff-name">Mr. RUGAMBAGE André</div>
             <p>Garden TSS was found in 2012 and since then, 
                 Garden TSS is striving to provide the practical and 
@@ -398,7 +398,7 @@
                 trades and options.</p>
         </div>
         <div class="staff-card">
-            <img src="./image/protg.jpg" alt="Staff Member 3" class="staff-image">
+            <img src="./images of garden/adiv.jpg" alt="Staff Member 3" class="staff-image">
             <div class="staff-name">Mrs. MUKAMUGEMA Emerance</div>
             <p>Advisor of Garden TSS</p>
         </div>
