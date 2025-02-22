@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle with JS</title>
+    <style>
+        :root {
+            --background-color: #ffffff;
+            --text-color: #333333;
+            --card-background: #f0f0f0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .card {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        body.dark-mode {
+            --background-color: #333333;
+            --text-color: #ffffff;
+            --card-background: #444444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label class="toggle-switch" for="darkModeToggle">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+        <h1>Dark Mode Toggle with JS</h1>
+        <div class="card">
+            <p>This is a sample card to demonstrate the dark mode effect.</p>
+        </div>
+    </div>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        // Function to enable dark mode
+        function enableDarkMode() {
+            body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'enabled');
+        }
+
+        // Function to disable dark mode
+        function disableDarkMode() {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode', null);
+        }
+
+        // Check for saved user preference, if any, on load of the website
+        const darkMode = localStorage.getItem('darkMode');
+
+        // If the user previously enabled dark mode
+        if (darkMode === 'enabled') {
+            enableDarkMode();
+            darkModeToggle.checked = true;
+        }
+
+        // When someone clicks the button
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                enableDarkMode();
+            } else {
+                disableDarkMode();
+            }
+        });
+    </script>
+</body>
+</html>
+
