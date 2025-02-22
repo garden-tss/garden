@@ -1,0 +1,13 @@
+services:
+  garden:
+    container_name: app
+    build: .
+    volumes:
+      - .:/www
+    ports:
+      - "22:22"
+      - "80:80"
+
+volumes:
+  db:
+    driver: local
