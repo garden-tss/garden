@@ -26,7 +26,7 @@
         </article>
 
         <article class="article-card center-article">
-            <img src="./image/mn.jpg" alt="Hands holding smartphone">
+            <img src="./image/logo.jpg" alt="Hands holding smartphone">
             <div class="article-content">
                 <div class="author">By the hacker <span class="date"></span></div>
                 <h2>Dear Parents and Guardians,</h2>

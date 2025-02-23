@@ -30,7 +30,7 @@
             grid-row: 1 / span 2;
             position: relative;
             color: white;
-            background-image: url(./image/code.jpeg);
+            /* background-image: url(./image/mn.jpeg); */
             background-size: cover;
             background-position: center;
             min-height: 500px;
